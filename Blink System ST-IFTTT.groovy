@@ -87,6 +87,6 @@ def refresh() {
 //	Re-affirm the current state with Blink (through IFTTT), just in case
 //	it did not work the first time.
 	def blinkState = device.currentValue("switch")
-	sendEvent(name: "switch", value: "${blinkState}", isStateChange: true)
+	sendEvent(name: "switch", value: "${blinkState}")
 	log.info "${device.label} state reset to ${device.currentValue("switch")}"
 }
